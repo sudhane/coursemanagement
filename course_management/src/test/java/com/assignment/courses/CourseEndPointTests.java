@@ -50,7 +50,7 @@ public class CourseEndPointTests {
 
         // <4>
         Mockito
-            .when(this.courseRepository.findAll())
+            .when(this.courseRepository.findAllByOrderByIdAsc())
             .thenReturn(Flux.just(new Course(1L, "Java", 12, "OOPS"), new Course(2L, "Master Chef", 33, "Cooking")));
 
         // <5>
